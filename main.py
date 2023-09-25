@@ -109,5 +109,5 @@ async def frun(ctx):
             await ctx.send(f'Error al iniciar el servidor: {str(e)}')
         
         driver.quit()
-
-bot.run('MTE1NTY0NDQ0MjQ5NDEwNzY0OA.G6MH9k.gaqcZN3RN01rOlnyDdIsjfgeLsAuESsxf1C7j8')
+import tokenDiscord
+bot.run(tokenDiscord.rtoken())

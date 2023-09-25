@@ -2,6 +2,7 @@
 FROM python:3.10
 
 ADD main.py .
+ADD tokenDiscord.py .
 RUN pip install pip install discord.py
 RUN pip install selenium
 RUN pip install beautifulsoup4
