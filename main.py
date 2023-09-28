@@ -12,6 +12,28 @@ intents = discord.Intents.all()
 intents.typing = False
 intents.presences = False
 
+# Launch the browser with the cache enabled
+chrome_options = Options()
+chrome_options.add_argument('--disk-cache')
+driver = webdriver.Chrome(options=chrome_options)
+
+# Load a web page
+driver.get('https://www.google.com/')
+
+# Wait for the page to load
+time.sleep(5)
+
+# Print the page load time
+print(driver.execute_script('return performance.timing.loadEventEnd - performance.timing.navigationStart'))
+
+# Close the browser
+driver.quit()
+
+
+
+
+
+
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 async def obtener_estado_servidor(html):
@@ -31,7 +53,9 @@ async def obtener_estado_servidor(html):
 async def server():
     chrome_options = Options()
     chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disk-cache')
     driver = webdriver.Chrome(options=chrome_options)
+    # driver = webdriver.Chrome(options=chrome_options)
 
     usuario = "ikerfdoas@gmail.com"
     contraseña = "1975jeIE"
