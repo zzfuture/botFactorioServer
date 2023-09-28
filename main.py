@@ -29,6 +29,14 @@ print(driver.execute_script('return performance.timing.loadEventEnd - performanc
 # Close the browser
 driver.quit()
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> a203edec8f96bd14179898b8295aa9ea0748206b
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 async def obtener_estado_servidor(html):
